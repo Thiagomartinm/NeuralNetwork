@@ -1,3 +1,25 @@
+""" 
+|**********************************************************************|
+*
+* Project            Multilayer Perceptron Implementation
+*
+* Author(s)          Thiago Martin, Matheus Borges e Rodrigo Dallagnol
+*
+* Date created       22/11/2019
+*
+* Purpose            Proof of concept
+*
+* Current Version    v1.0
+*
+* Copyright (c) 2019 Thiago Martin
+* This code is licensed under MIT license (see LICENSE for details)
+*
+* Feel free to use this code however you wish.
+* Do not take knowledge for granted, spread it!
+*
+|**********************************************************************| 
+"""
+
 import random
 import numpy as np
 

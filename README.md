@@ -1,2 +1,3 @@
-# NeuralNetwork
- Multilayer Perceptron Implementation
+# Neural Network
+
+A Multilayer Perceptron implementation 

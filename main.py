@@ -1,19 +1,19 @@
 from mlp import MLP
-import matplotlib
+# import matplotlib
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 if __name__ == '__main__':
     training = {}
     test = {}
 
-    training['labels'] = np.genfromtxt('iris_labels_training.csv', delimiter=',')
-    test['labels'] = np.genfromtxt('iris_labels_test.csv', delimiter=',')
-    training['features'] = np.genfromtxt('iris_samples_training.csv', delimiter=',')
-    test['features'] = np.genfromtxt('iris_samples_test.csv', delimiter=',')
+    training['labels'] = np.genfromtxt('Database/iris_labels_training.csv', delimiter=',')
+    test['labels'] = np.genfromtxt('Database/iris_labels_test.csv', delimiter=',')
+    training['features'] = np.genfromtxt('Database/iris_samples_training.csv', delimiter=',')
+    test['features'] = np.genfromtxt('Database/iris_samples_test.csv', delimiter=',')
 
     network = MLP((4, 7, 3))
-    network.fit(training['features'], training['labels'], epochs=5000, stop_criteria=0.0001, default_window=1000)
+    network.fit(training['features'], training['labels'])
     network.predict(test['features'], test['labels'])
 
     # Display Confusion Matrix
@@ -37,7 +37,7 @@ if __name__ == '__main__':
         for line in network.weights[index]:
             print('\t\t{}'.format(line))
 
-    # Plot moving average
-    plt.plot(network.moving_average)
-    plt.grid(color='gray', linestyle='--', linewidth=0.5)
-    plt.show()
+    # # Plot moving average
+    # plt.plot(network.moving_average)
+    # plt.grid(color='gray', linestyle='--', linewidth=0.5)
+    # plt.show()
