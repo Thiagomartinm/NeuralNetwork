@@ -110,7 +110,7 @@ class MLP:
 
         return error_sq_sum
 
-    def fit(self, X, Y, epochs=30000, learning_rate=.1, momentum=0.1, stop_criteria=None, default_window=100):
+    def fit(self, X, Y, epochs=3000, learning_rate=.1, momentum=0.1, stop_criteria=None, default_window=100):
         self.errors = []
         self.moving_average = []
 
